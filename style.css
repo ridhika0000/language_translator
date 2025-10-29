@@ -1,0 +1,176 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #003a52;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* fix height */
+}
+.heading {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    margin: 15px 0;
+    color: white;
+}
+
+
+.container {
+  width: 650px;
+  height: 600px;
+  background: linear-gradient(to top, #012E4D, #007ea7); /* fix gradient */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* softer shadow */
+  border-radius: 10px;
+  border: none;
+}
+
+.text {
+  width: 95%;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#fromtext, #totext {
+  height: 100%;
+  width: 100%;
+  color: black;
+  background-color: white;
+  font-size: 18px;
+  padding: 15px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 8px; /* fixed */
+  resize: none; /* prevent stretching */
+}
+
+#totext {
+  font-size: 19px;
+}
+
+.selectarea {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00171f;
+}
+
+.select1 {
+  flex: 1; /* equal width */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border-right: 2px solid #007ea7;
+}
+
+.select1:last-child {
+  border-right: none; /* remove last border */
+}
+
+select {
+  padding: 8px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+#transfer {
+  width: 500px;
+  height: 50px;
+  background-color: #00171F;
+  margin-top: 40px;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#transfer:hover {
+  background-color: #003a52;
+}
+/* ✅ Make translator responsive */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .text {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #fromtext, #totext {
+    width: 100%;
+    height: 150px;
+  }
+
+  .selectarea {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .select1 {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #007ea7;
+    padding-bottom: 10px;
+  }
+
+  .select1:last-child {
+    border-bottom: none;
+  }
+
+  #transfer {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+}
+
+/* ✅ Extra small screens */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  #fromtext, #totext {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  select {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  #transfer {
+    font-size: 16px;
+    height: 45px;
+  }
+}
